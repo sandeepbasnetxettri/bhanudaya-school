@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Avatar Upload</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container" style="padding: 50px 0;">
+        <div class="auth-box">
+            <h2><i class="fas fa-user-circle"></i> Test Avatar Upload</h2>
+            
+            <form id="testForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="avatar">Profile Picture</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                    <small>Allowed formats: JPG, JPEG, PNG, GIF. Max size: 2MB</small>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Upload Avatar</button>
+                </div>
+            </form>
+            
+            <div id="result" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('avatar').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.createElement('div');
+                    preview.innerHTML = `
+                        <div style="text-align: center; margin-top: 20px;">
+                            <h3>Preview:</h3>
+                            <img src="${e.target.result}" alt="Avatar Preview" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #4CAF50;">
+                        </div>
+                    `;
+                    
+                    // Remove existing preview if any
+                    const existingPreview = document.querySelector('.preview-container');
+                    if (existingPreview) {
+                        existingPreview.remove();
+                    }
+                    
+                    preview.className = 'preview-container';
+                    document.getElementById('testForm').appendChild(preview);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fileInput = document.getElementById('avatar');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                document.getElementById('result').innerHTML = '<div class="error">Please select a file to upload.</div>';
+                return;
+            }
+            
+            // Check file type
+            const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
+            if (!allowedTypes.includes(file.type)) {
+                document.getElementById('result').innerHTML = '<div class="error">Please select a valid image file (JPG, JPEG, PNG, GIF).</div>';
+                return;
+            }
+            
+            // Check file size (2MB limit)
+            if (file.size > 2 * 1024 * 1024) {
+                document.getElementById('result').innerHTML = '<div class="error">File size exceeds 2MB limit.</div>';
+                return;
+            }
+            
+            document.getElementById('result').innerHTML = '<div class="success">File is valid! In a real application, this would be uploaded to the server.</div>';
+        });
+    </script>
+</body>
+</html>

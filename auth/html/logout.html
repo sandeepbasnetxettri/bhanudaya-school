@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - Excellence School</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <h2><i class="fas fa-sign-out-alt"></i> Logging Out</h2>
+                <p>Please wait while we securely log you out...</p>
+            </div>
+            
+            <div class="logout-message">
+                <div class="spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                <p>You are being logged out. This helps protect your account security.</p>
+            </div>
+            
+            <div class="auth-footer">
+                <p><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login Again</a></p>
+                <p><a href="../../index.php"><i class="fas fa-home"></i> Back to Home</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulate logout process
+        setTimeout(function() {
+            window.location.href = "login.html";
+        }, 3000);
+    </script>
+</body>
+</html>

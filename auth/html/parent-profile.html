@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Profile - Excellence School</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-info">
+                    <span><i class="fas fa-phone"></i> +977-1-4567890</span>
+                    <span><i class="fas fa-envelope"></i> bhanudayahss071@gmail.com</span>
+                </div>
+                <div class="top-links">
+                    <a href="parent-portal.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-section">
+                        <img src="../../images/school-logo.png" alt="School Logo" class="logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%234CAF50%22 width=%22100%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22white%22%3ES%3C/text%3E%3C/svg%3E'">
+                        <div class="school-info">
+                            <h1>Bhanudaya Secondary School</h1>
+                            <p class="tagline">Building Tomorrow's Leaders Today</p>
+                        </div>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../../index.php">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../pages/history.html">History</a></li>
+                            <li><a href="../../pages/vision-mission.html">Vision & Mission</a></li>
+                            <li><a href="../../pages/principal-message.html">Principal's Message</a></li>
+                            <li><a href="../../pages/faculty.html">Faculty</a></li>
+                            <li><a href="../../pages/management.html">Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Academics <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../pages/courses.html">Courses Offered</a></li>
+                            <li><a href="../../pages/computer-science.html">+2 Computer Science</a></li>
+                            <li><a href="../../pages/hotel-management.html">+2 Hotel Management</a></li>
+                            <li><a href="../../pages/timetable.html">Class Timetable</a></li>
+                            <li><a href="../../pages/calendar.html">Academic Calendar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../pages/admission.html">Admissions</a></li>
+                    <li><a href="../../pages/notice.html">Notice Board</a></li>
+                    <li><a href="../../pages/gallery.html">Gallery</a></li>
+                    <li><a href="../../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="profile-header">
+        <div class="container">
+            <h1><i class="fas fa-user-circle"></i> Parent Profile</h1>
+        </div>
+    </section>
+
+    <section class="profile-content">
+        <div class="container">
+            <div class="profile-grid">
+                <div class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="avatar-container">
+                            <img src="../../images/default-avatar.png" alt="Profile Picture" class="avatar" id="profileAvatar">
+                            <button class="change-avatar-btn" id="changeAvatarBtn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <h3 id="parentName">John Parent</h3>
+                        <p id="parentRole">Parent</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-value">2</span>
+                                <span class="stat-label">Children</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">0</span>
+                                <span class="stat-label">Pending Fees</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-nav">
+                        <ul>
+                            <li class="active"><a href="#overview"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
+                            <li><a href="#personal-info"><i class="fas fa-user"></i> Personal Info</a></li>
+                            <li><a href="#academic-details"><i class="fas fa-graduation-cap"></i> Academic Details</a></li>
+                            <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="profile-main">
+                    <!-- Overview Section -->
+                    <div class="profile-section active" id="overview">
+                        <h2><i class="fas fa-chart-line"></i> Dashboard Overview</h2>
+                        <div class="dashboard-widgets">
+                            <div class="widget">
+                                <div class="widget-header">
+                                    <h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="events-list">
+                                        <li>
+                                            <span class="event-date">Dec 20</span>
+                                            <span class="event-title">Final Exams</span>
+                                        </li>
+                                        <li>
+                                            <span class="event-date">Dec 25</span>
+                                            <span class="event-title">Christmas Holiday</span>
+                                        </li>
+                                        <li>
+                                            <span class="event-date">Jan 01</span>
+                                            <span class="event-title">New Year Celebration</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="widget">
+                                <div class="widget-header">
+                                    <h3><i class="fas fa-bell"></i> Recent Notices</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="notices-list">
+                                        <li>
+                                            <span class="notice-title">Annual Sports Day</span>
+                                            <span class="notice-date">Posted 2 days ago</span>
+                                        </li>
+                                        <li>
+                                            <span class="notice-title">Library Timing Changes</span>
+                                            <span class="notice-date">Posted 1 week ago</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Personal Information Section -->
+                    <div class="profile-section" id="personal-info">
+                        <h2><i class="fas fa-user-edit"></i> Personal Information</h2>
+                        <form id="personalInfoForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" value="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" value="Parent">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" value="john.parent@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" value="+977-1-1234567">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="dateOfBirth">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" value="1980-05-15">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select id="gender" name="gender">
+                                        <option value="male" selected>Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea id="address" name="address" rows="3">Kathmandu, Nepal</textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="occupation">Occupation</label>
+                                <input type="text" id="occupation" name="occupation" value="Software Engineer">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="childrenCount">Number of Children</label>
+                                    <input type="number" id="childrenCount" name="childrenCount" value="2" min="1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="relationship">Relationship</label>
+                                    <select id="relationship" name="relationship">
+                                        <option value="father" selected>Father</option>
+                                        <option value="mother">Mother</option>
+                                        <option value="guardian">Guardian</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Save Changes
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Academic Details Section -->
+                    <div class="profile-section" id="academic-details">
+                        <h2><i class="fas fa-graduation-cap"></i> Children's Academic Details</h2>
+                        
+                        <div class="children-accordion">
+                            <div class="child-section">
+                                <div class="child-header">
+                                    <h3><i class="fas fa-user-graduate"></i> John Doe (Grade 10)</h3>
+                                    <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="child-content">
+                                    <div class="academic-summary">
+                                        <div class="summary-card">
+                                            <h4>Current Average</h4>
+                                            <p class="grade">85%</p>
+                                        </div>
+                                        <div class="summary-card">
+                                            <h4>Attendance</h4>
+                                            <p class="attendance">92%</p>
+                                        </div>
+                                        <div class="summary-card">
+                                            <h4>Rank</h4>
+                                            <p class="rank">5th / 42</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="subject-performance">
+                                        <h4>Subject-wise Performance</h4>
+                                        <table class="performance-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Subject</th>
+                                                    <th>Teacher</th>
+                                                    <th>Current Grade</th>
+                                                    <th>Last Exam</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Mathematics</td>
+                                                    <td>Mr. Sharma</td>
+                                                    <td class="grade-a">A</td>
+                                                    <td>88%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Science</td>
+                                                    <td>Dr. KC</td>
+                                                    <td class="grade-a">A</td>
+                                                    <td>90%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>English</td>
+                                                    <td>Mrs. Thapa</td>
+                                                    <td class="grade-b">B+</td>
+                                                    <td>82%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="action-buttons">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-download"></i> Download Report
+                                        </button>
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-comments"></i> Contact Teacher
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="child-section">
+                                <div class="child-header">
+                                    <h3><i class="fas fa-user-graduate"></i> Jane Doe (Grade 8)</h3>
+                                    <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="child-content">
+                                    <div class="academic-summary">
+                                        <div class="summary-card">
+                                            <h4>Current Average</h4>
+                                            <p class="grade">88%</p>
+                                        </div>
+                                        <div class="summary-card">
+                                            <h4>Attendance</h4>
+                                            <p class="attendance">95%</p>
+                                        </div>
+                                        <div class="summary-card">
+                                            <h4>Rank</h4>
+                                            <p class="rank">3rd / 38</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="subject-performance">
+                                        <h4>Subject-wise Performance</h4>
+                                        <table class="performance-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Subject</th>
+                                                    <th>Teacher</th>
+                                                    <th>Current Grade</th>
+                                                    <th>Last Exam</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Mathematics</td>
+                                                    <td>Mr. Sharma</td>
+                                                    <td class="grade-a">A</td>
+                                                    <td>90%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Science</td>
+                                                    <td>Dr. KC</td>
+                                                    <td class="grade-a">A</td>
+                                                    <td>92%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>English</td>
+                                                    <td>Mrs. Thapa</td>
+                                                    <td class="grade-a">A-</td>
+                                                    <td>85%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="action-buttons">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-download"></i> Download Report
+                                        </button>
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-comments"></i> Contact Teacher
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Settings Section -->
+                    <div class="profile-section" id="settings">
+                        <h2><i class="fas fa-cog"></i> Account Settings</h2>
+                        
+                        <div class="settings-section">
+                            <h3><i class="fas fa-bell"></i> Notification Preferences</h3>
+                            <div class="setting-options">
+                                <div class="setting-option">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>Email Notifications</span>
+                                </div>
+                                
+                                <div class="setting-option">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>SMS Alerts</span>
+                                </div>
+                                
+                                <div class="setting-option">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>Push Notifications</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-section">
+                            <h3><i class="fas fa-lock"></i> Security Settings</h3>
+                            <div class="setting-options">
+                                <div class="setting-option">
+                                    <button class="btn btn-outline">
+                                        <i class="fas fa-key"></i> Change Password
+                                    </button>
+                                </div>
+                                
+                                <div class="setting-option">
+                                    <button class="btn btn-outline">
+                                        <i class="fas fa-shield-alt"></i> Two-Factor Authentication
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-section">
+                            <h3><i class="fas fa-user-circle"></i> Profile Visibility</h3>
+                            <div class="setting-options">
+                                <div class="setting-option">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>Allow teachers to view my contact information</span>
+                                </div>
+                                
+                                <div class="setting-option">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>Show my profile to other parents</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-section">
+                            <h3><i class="fas fa-trash-alt"></i> Account Management</h3>
+                            <div class="setting-options">
+                                <div class="setting-option">
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-download"></i> Download My Data
+                                    </button>
+                                </div>
+                                
+                                <div class="setting-option">
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-user-slash"></i> Deactivate Account
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Excellence School is committed to providing quality education and nurturing young minds for a successful future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Binayi Triveni Rural Municipality, Dumkibas, Nawalaparasi, Nepal</li>
+                        <li><i class="fas fa-phone"></i> +977-1-4567890</li>
+                        <li><i class="fas fa-envelope"></i> bhanudayahss071@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Sun-Fri: 9:00 AM - 4:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Excellence School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/parent-profile.js"></script>
+</body>
+</html>

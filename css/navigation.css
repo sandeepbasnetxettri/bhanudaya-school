@@ -1,0 +1,165 @@
+/* Enhanced Navigation Styles for Excellence School Website */
+
+/* Keyboard focus indicator */
+.keyboard-focused {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Active state for navigation items */
+.nav-menu > li > a.active {
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.nav-menu > li > a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+}
+
+/* Dropdown menu enhancements */
+.dropdown-menu {
+    border-top: 2px solid #3498db;
+}
+
+.dropdown-menu li a {
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+    background: #f8f9fa;
+    border-left-color: #3498db;
+    padding-left: 25px;
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+    .nav-menu {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 5px 5px;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        max-height: 500px;
+        overflow: visible;
+    }
+    
+    .dropdown-menu {
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .dropdown-menu li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .dropdown-menu li:last-child a {
+        border-bottom: none;
+    }
+}
+
+/* Navigation transition effects */
+.nav-menu > li > a,
+.dropdown-menu li a {
+    transition: all 0.3s ease;
+}
+
+/* Breadcrumb navigation (if needed) */
+.breadcrumb {
+    padding: 10px 0;
+    background: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #6c757d;
+}
+
+/* Skip to content link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #3498db;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Navigation loading indicator */
+.nav-loading {
+    position: relative;
+}
+
+.nav-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 1200px) {
+    .nav-menu > li > a {
+        padding: 15px 25px;
+    }
+    
+    .dropdown-menu {
+        min-width: 250px;
+    }
+}
+
+/* Dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+    .nav-menu > li > a {
+        color: #fff;
+    }
+    
+    .dropdown-menu {
+        background: #343a40;
+    }
+    
+    .dropdown-menu li a {
+        color: #fff;
+    }
+    
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+        background: #495057;
+    }
+}

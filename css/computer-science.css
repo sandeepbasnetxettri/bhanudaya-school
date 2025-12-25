@@ -1,0 +1,375 @@
+/* Computer Science Page Specific Styles */
+
+/* Program Intro */
+.program-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 10px;
+    border-left: 5px solid #2196F3;
+}
+
+.program-intro h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0d47a1;
+}
+
+.program-intro p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Program Highlights */
+.program-highlights {
+    margin: 60px 0;
+}
+
+.program-highlights h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0d47a1;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.highlight-card {
+    background: #fff;
+    padding: 35px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border-top: 3px solid #2196F3;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.highlight-card i {
+    font-size: 50px;
+    color: #2196F3;
+    margin-bottom: 15px;
+}
+
+.highlight-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #0d47a1;
+}
+
+.highlight-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Subjects Section */
+.subjects-section {
+    margin: 60px 0;
+}
+
+.subjects-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0d47a1;
+}
+
+.year-courses {
+    margin-bottom: 50px;
+    background: #f5f9ff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.year-courses h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #0d47a1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.subject-box {
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+    border: 1px solid #e3f2fd;
+}
+
+.subject-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border-color: #2196F3;
+}
+
+.subject-box i {
+    font-size: 36px;
+    color: #2196F3;
+    margin-bottom: 10px;
+}
+
+.subject-box h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #0d47a1;
+}
+
+.subject-box p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Topics Section */
+.topics-section {
+    margin: 60px 0;
+    background: #f5f9ff;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.topics-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0d47a1;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.topic-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.topic-card h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0d47a1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topic-card h4 i {
+    color: #2196F3;
+}
+
+.topic-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.topic-card ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #333;
+}
+
+.topic-card ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+/* Facilities Section */
+.facilities-section {
+    margin: 60px 0;
+}
+
+.facilities-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0d47a1;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.facility-card {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.facility-card i {
+    font-size: 48px;
+    color: #2196F3;
+    margin-bottom: 15px;
+}
+
+.facility-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0d47a1;
+}
+
+.facility-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Career Section */
+.career-section {
+    margin: 60px 0;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.career-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0d47a1;
+}
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.career-item {
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+    border-top: 3px solid #2196F3;
+}
+
+.career-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.career-item i {
+    font-size: 40px;
+    color: #2196F3;
+}
+
+.career-item span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0d47a1;
+}
+
+/* Admission CTA */
+.admission-cta {
+    margin: 60px 0;
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #2196F3, #0d47a1);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.admission-cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.admission-cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.admission-cta .btn {
+    font-size: 18px;
+    padding: 15px 40px;
+    background: #fff;
+    color: #2196F3;
+    border: 2px solid #fff;
+}
+
+.admission-cta .btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .program-intro h2 {
+        font-size: 28px;
+    }
+    
+    .program-highlights h2,
+    .subjects-section h2,
+    .topics-section h2,
+    .facilities-section h2 {
+        font-size: 28px;
+    }
+    
+    .year-courses h3 {
+        font-size: 22px;
+    }
+    
+    .career-section h2 {
+        font-size: 28px;
+    }
+    
+    .admission-cta h2 {
+        font-size: 30px;
+    }
+    
+    .admission-cta {
+        padding: 40px 20px;
+    }
+    
+    .subjects-grid,
+    .highlights-grid,
+    .topics-grid,
+    .facilities-grid,
+    .career-grid {
+        grid-template-columns: 1fr;
+    }
+}

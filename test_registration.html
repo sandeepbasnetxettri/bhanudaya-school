@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Student Registration</title>
+    <link rel="stylesheet" href="login_system/css/login_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .instructions {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .instructions h2 {
+            color: #2196F3;
+            margin-top: 0;
+        }
+        .instructions ul {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .btn-secondary {
+            background: #2196F3;
+        }
+        .btn-secondary:hover {
+            background: #1976D2;
+        }
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration System Test</h1>
+        
+        <div class="instructions">
+            <h2>Testing Instructions</h2>
+            <p>To test the student registration form with email notifications:</p>
+            <ul>
+                <li>Click the "Test Registration Form" button below to open the enhanced registration form</li>
+                <li>Fill in all required fields in the form</li>
+                <li>Click "Register" to submit the form</li>
+                <li>In demo mode, you'll see a success message indicating that a notification would be sent to <strong>sandeepbasnetxettri@gmail.com</strong></li>
+                <li>For actual email functionality, you'll need to:
+                    <ul>
+                        <li>Install PHPMailer using Composer</li>
+                        <li>Configure Gmail SMTP settings in <code>login_system/php/config/email.php</code></li>
+                        <li>Set up a proper web server with PHP support</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="links">
+            <a href="login_system/student_register.html" class="btn">
+                <i class="fas fa-user-plus"></i> Test Registration Form
+            </a>
+            <a href="login_system/student_login.html" class="btn btn-secondary">
+                <i class="fas fa-sign-in-alt"></i> Student Login
+            </a>
+            <a href="index.html" class="btn btn-secondary">
+                <i class="fas fa-home"></i> Home Page
+            </a>
+        </div>
+        
+        <div class="instructions">
+            <h2>Email Configuration Notes</h2>
+            <p>To enable actual email sending functionality:</p>
+            <ol>
+                <li>Install PHPMailer by running: <code>composer require phpmailer/phpmailer</code></li>
+                <li>Update your Gmail credentials in <code>login_system/php/config/email.php</code>:</li>
+                <li>Generate an App Password for Gmail at <a href="https://myaccount.google.com/apppasswords" target="_blank">Google App Passwords</a></li>
+                <li>Replace the placeholder values with your actual credentials</li>
+                <li>Ensure your web server supports PHP and has the mail function enabled</li>
+            </ol>
+            <p>Upon successful registration, emails will be sent to:
+                <ul>
+                    <li><strong>Student</strong>: Confirmation email to their registered email</li>
+                    <li><strong>Administrator</strong>: Notification email to <strong>sandeepbasnetxettri@gmail.com</strong></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
